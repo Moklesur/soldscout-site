@@ -1,122 +1,61 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SoldScout Privacy Policy</title>
-  <!-- Plain page with no scripts, so it can be hosted anywhere (for example GitHub Pages) -->
-  <style>
-    body {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 32px 20px 64px;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      font-size: 16px;
-      line-height: 1.6;
-      color: #1f2937;
-      background: #ffffff;
-    }
-    h1 { color: #0f766e; margin-bottom: 4px; }
-    h2 { margin-top: 32px; font-size: 20px; }
-    .updated { color: #6b7280; margin-top: 0; }
-    table { border-collapse: collapse; width: 100%; }
-    th, td { border: 1px solid #e5e7eb; padding: 8px 10px; text-align: left; vertical-align: top; }
-    th { background: #f9fafb; }
-  </style>
-</head>
-<body>
-  <h1>SoldScout Privacy Policy</h1>
-  <p class="updated">Last updated: November 1, 2026 (version 0.1.0)</p>
+SoldScout Privacy Policy
+Last updated: November 5, 2026 (version 0.1.0)
 
-  <p>SoldScout is a Chrome extension that helps eBay sellers research sold prices and profit.
-    This page explains what data SoldScout uses, where it is kept, and what we never do.</p>
+SoldScout is a Chrome extension that helps eBay sellers research sold prices and profit. This page explains what data SoldScout uses, where it is kept, and what we never do.
 
-  <h2>Short version</h2>
-  <ul>
-    <li>SoldScout works only inside your own browser. It has no server and no account.</li>
-    <li>SoldScout does not send your data to us or to anyone else.</li>
-    <li>No analytics, no tracking, no ads, no cookies. We never sell data.</li>
-  </ul>
+Short version
+SoldScout works only inside your own browser. It has no server and no account.
+SoldScout does not send your data to us or to anyone else.
+No analytics, no tracking, no ads, no cookies. We never sell data.
+What SoldScout reads
+When you open a page on www.ebay.com, SoldScout reads the public product information on that page to show its card: for example the title, price, shipping, sold count, watchers, seller name and feedback, condition, and the prices and dates on a sold items search. It reads pages you open yourself, with one exception below, and never crawls eBay. This information is used on the spot to show the card and is not sent anywhere.
 
-  <h2>What SoldScout reads</h2>
-  <p>When you open a page on <strong>www.ebay.com</strong>, SoldScout reads the public product
-    information on that page to show its card: for example the title, price, shipping, sold count,
-    watchers, seller name and feedback, condition, and the prices and dates on a sold items search.
-    It only reads pages you open yourself. It never opens or loads eBay pages in the background.
-    This information is used on the spot to show the card and is not sent anywhere.</p>
-  <p>SoldScout does not run on any other website, and it does not read your eBay account, messages,
-    orders, passwords or payment details.</p>
+Recent sales on a listing: when you open a listing, SoldScout loads that same listing's public purchase history page on www.ebay.com (the page behind the "X sold" link) to count how many sold in the last 7, 14 and 30 days. Chrome sends this request to eBay like a normal visit to that page from your browser. SoldScout only does this for the listing you have open, reuses a count for 6 hours, and loads at most 6 such pages a minute. The page is read on your computer; it is not sent to us or anyone else. SoldScout never reads buyer names from it.
 
-  <h2>What SoldScout stores</h2>
-  <p>SoldScout keeps data with Chrome's local extension storage (<code>chrome.storage.local</code>),
-    which stays on your computer:</p>
-  <table>
-    <tr><th>Data</th><th>When</th><th>Why</th></tr>
-    <tr>
-      <td>Saved products: item number, title, price, currency, shipping, sold count, watchers, seller name, date saved</td>
-      <td>Only when you press "Save product"</td>
-      <td>To show your saved list and let you download it as a CSV file</td>
-    </tr>
-    <tr>
-      <td>Settings: default fee %, fee per order, currency</td>
-      <td>Only when you save the Settings page</td>
-      <td>To fill in the profit calculator</td>
-    </tr>
-    <tr>
-      <td>Card place: where you moved the SoldScout card and whether you folded it into the side tab</td>
-      <td>Only when you move, fold or open the card</td>
-      <td>To show the card in the same place on the next page</td>
-    </tr>
-    <tr>
-      <td>Sold counts: item number, the "X sold" number, category, last updated date, picture address (from eBay's image server), seller username and feedback % of listings you opened (last 200, deleted after 30 days)</td>
-      <td>When you open a listing that shows "X sold"</td>
-      <td>To show "Total sold (all time)", the product and the seller information on that listing's purchase history page</td>
-    </tr>
-    <tr>
-      <td>Competitor pages: for each seller whose sold items page you opened, the seller name, eBay's result count, which result pages you opened, and per sold listing the item number, title, picture address (from eBay's image server), price, currency, shipping, sold date, format, Best Offer and condition (sales older than 90 days deleted). From the seller's store page: the store name, positive feedback %, items sold, followers, number of active listings, store category names, and one small snapshot of these numbers per day (last 60 days with a visit, up to one year). Last 50 sellers, up to 500 listings each. Never anything about buyers, and never feedback comments.</td>
-      <td>When you open a seller's sold items page or store page</td>
-      <td>To add page 2, 3... to page 1, show the competitor panel again on your next visit, and show how a seller changed since your last visit</td>
-    </tr>
-    <tr>
-      <td>Panel width: how wide you made the details panel on purchase history pages (one number)</td>
-      <td>Only when you drag the panel's edge</td>
-      <td>To open the panel at the same width next time</td>
-    </tr>
-  </table>
-  <p>The numbers you type into the profit calculator are not stored. CSV files are made on your
-    computer and saved where you choose.</p>
+The side panel shows which kind of eBay page your current tab is (for example a listing or a sold search). It only looks at the address of eBay tabs. Chrome does not show SoldScout the address of tabs on other websites.
 
-  <h2>Sharing</h2>
-  <p>SoldScout does not share, sell or transfer any data to anyone. The links on the card
-    (for example "Sold listings") open normal eBay pages in a new tab only when you click them.</p>
+"Check sold on eBay" in the right-click menu: when you select text on any website, right-click and choose this menu item, Chrome gives SoldScout only the text you selected. SoldScout opens an eBay sold items search for that text in a new tab. The text goes only to eBay, in the search address, just as if you typed it into eBay yourself. SoldScout does not read the rest of that page and does not store the text. You can turn the menu off on the Settings page.
 
-  <h2>Deleting your data</h2>
-  <ul>
-    <li>Delete one saved product with its <strong>Delete</strong> button in the side panel.</li>
-    <li>Reset settings with <strong>Reset to defaults</strong> on the Settings page.</li>
-    <li>Removing the extension from Chrome deletes all of its stored data.</li>
-  </ul>
+SoldScout does not run on any other website, and it does not read your eBay account, messages, orders, passwords or payment details.
 
-  <h2>Permissions</h2>
-  <table>
-    <tr><th>Permission</th><th>Why</th></tr>
-    <tr><td>Access to www.ebay.com</td><td>To read the eBay page you are viewing and show the card on it</td></tr>
-    <tr><td>storage</td><td>To keep your saved products, settings and card place on your computer</td></tr>
-    <tr><td>sidePanel</td><td>To open the profit calculator and saved list in Chrome's side panel</td></tr>
-  </table>
+What SoldScout stores
+SoldScout keeps data with Chrome's local extension storage (chrome.storage.local), which stays on your computer:
 
-  <h2>Children</h2>
-  <p>SoldScout is a tool for sellers and is not made for children under 13.</p>
+Data	When	Why
+Saved products: item number, title, price, currency, shipping, sold count, watchers, seller name, eBay category number, date saved, the 7 and 30 day units counted from that listing's purchase history page, by the listing card or when you open that page yourself (with the date of that check), and the cost you type with "+ Add my cost"	Only when you press "Save product", and the cost only when you type it	To show your saved list with its profit, and let you download it as a CSV file
+Settings: default fee %, fee per order, currency, and the True profit defaults (store type, sales tax %, ads %, Best Offer %, profit % you want), whether risk checks show on listing pages, whether the right-click menu shows, light or dark look (Appearance), and the eBay usernames you type as your own (up to 5)	Only when you save the Settings page	To fill in the profit calculator
+Card place: where you moved the SoldScout card and whether you folded it into the side tab	Only when you move, fold or open the card	To show the card in the same place on the next page
+Sold counts: item number, the "X sold" number, category, last updated date, picture address (from eBay's image server), seller username and feedback % of listings you opened (last 200, deleted after 30 days)	When you open a listing that shows "X sold"	To show "Total sold (all time)", the product and the seller information on that listing's purchase history page
+Competitor pages: for each seller whose sold items page you opened, the seller name, eBay's result count, which result pages you opened, and per sold listing the item number, title, picture address (from eBay's image server), price, currency, shipping, sold date, format, Best Offer and condition, and the time SoldScout first saw that listing (sales older than 90 days deleted). The start time of your current and previous visit to the seller's sold pages, to show "New since last visit". From the seller's store page: the store name, positive feedback %, items sold, followers, number of active listings, store category names, and one small snapshot of these numbers per day (last 60 days with a visit, up to one year). Last 50 sellers, up to 500 listings each. Never anything about buyers, and never feedback comments.	When you open a seller's sold items page or store page	To add page 2, 3... to page 1, show the competitor panel again on your next visit, and show how a seller changed since your last visit
+Competitor "Check sales": for a listing of a seller whose sold items page you opened, the item number and the 7 and 30 day units counted when you open that listing's purchase history page, with the date of that check and of the check before it (last 500 listings, deleted after 90 days). Never anything about buyers.	When you open the purchase history page of such a listing (for example with "Check sales")	To show real units, revenue and "Rising / Slowing" in the competitor Products tab
+Competitor "Competition": when the words of an active search you open are the title of such a seller's sold listing, eBay's result count for that search and the date (last 500 titles, deleted after 90 days). Your other searches are not saved.	When you open that active search (for example with "Find" in the competitor Products tab)	To show how many listings compete with each product in the competitor Products tab
+Your listings vs market: for each of your own listings you opened (its seller is one of your usernames in Settings), the item number, the day SoldScout first saw it, and the sold numbers from the last sold search you used for it (median, usual range, lowest and highest price, number of sales, condition, currency, date). Last 100 listings. While "Compare with sold" waits for its sold search (30 minutes): that listing's item number, title, price with shipping, currency and condition. Never anything about buyers or watchers.	When you open your own listing, press "Compare with sold", or use a sold search's numbers for your listing	To show how your price compares with sold items, and for how long SoldScout has seen the listing
+Tracked sellers: the username of each seller you give a ★ (Track), the time you added it, and the short note you type for it, if any (up to 25 sellers, 200 characters per note). A tracked seller's competitor page data above is kept even when you open more than 50 sellers.	Only when you press Track or ☆ in the Sellers tab or on the competitor panel, or save a note	To show your tracked sellers in the side panel's Sellers tab
+Recent sales: for listings you opened, the item number and the units sold in the last 7, 14 and 30 days, with the time of the count (last 500 listings, deleted after 30 days). The times of the last few purchase history pages SoldScout loaded (only the last minute is kept).	When you open a listing or its purchase history page	To show "Recent sales" on the listing card without loading the page again, and to keep within 6 pages a minute
+Panel width: how wide you made the details panel on purchase history pages (one number)	Only when you drag the panel's edge	To open the panel at the same width next time
+The numbers you type into the profit calculator are not stored. CSV files are made on your computer and saved where you choose.
 
-  <h2>Changes</h2>
-  <p>Future versions may add optional online features (for example an account or AI advice).
-    Before any data leaves your browser, we will update this policy, show the change in the
-    extension, and ask for your permission where the law or Chrome requires it.</p>
+Sharing
+SoldScout does not share, sell or transfer any data to anyone. The links on the card (for example "Sold listings") open normal eBay pages in a new tab only when you click them.
 
-  <h2>Contact</h2>
-  <p>Questions about privacy: <a href="mailto:soldscout.help@gmail.com">soldscout.help@gmail.com</a></p>
+Deleting your data
+Delete one saved product with its Delete button in the side panel.
+Untrack a seller with its ★ button in the side panel's Sellers tab, or press Delete there to remove everything SoldScout remembers about that seller.
+Reset settings with Reset to defaults on the Settings page.
+Removing the extension from Chrome deletes all of its stored data.
+Permissions
+Permission	Why
+Access to www.ebay.com	To read the eBay page you are viewing and show the card on it, to load the purchase history page of the listing you have open (Recent sales, see above), and to show in the side panel which eBay page is open
+storage	To keep your saved products, settings and card place on your computer
+sidePanel	To open your saved products, the profit calculator and other tools in Chrome's side panel
+contextMenus	To add "Check sold on eBay" to the right-click menu when you select text. It does not let SoldScout read any website
+Children
+SoldScout is a tool for sellers and is not made for children under 13.
 
-  <p><small>SoldScout is an independent tool. It is not affiliated with, endorsed by, or sponsored by eBay Inc.
-    eBay is a trademark of eBay Inc.</small></p>
-</body>
-</html>
+Changes
+Future versions may add optional online features (for example an account or AI advice). Before any data leaves your browser, we will update this policy, show the change in the extension, and ask for your permission where the law or Chrome requires it.
+
+Contact
+Questions about privacy: soldscout.help@gmail.com
+
+SoldScout is an independent tool. It is not affiliated with, endorsed by, or sponsored by eBay Inc. eBay is a trademark of eBay Inc.
