@@ -26,7 +26,7 @@
 </head>
 <body>
   <h1>SoldScout Privacy Policy</h1>
-  <p class="updated">Last updated: November 5, 2026 (version 0.1.0)</p>
+  <p class="updated">Last updated: November 25, 2026 (version 1.0.0)</p>
 
   <p>SoldScout is a Chrome extension that helps eBay sellers research sold prices and profit.
     This page explains what data SoldScout uses, where it is kept, and what we never do.</p>
@@ -49,7 +49,9 @@
     count how many sold in the last 7, 14 and 30 days. Chrome sends this request to eBay like a
     normal visit to that page from your browser. SoldScout only does this for the listing you have
     open, reuses a count for 6 hours, and loads at most 6 such pages a minute. The page is read on
-    your computer; it is not sent to us or anyone else. SoldScout never reads buyer names from it.</p>
+    your computer; it is not sent to us or anyone else. SoldScout never reads buyer names from it.
+    Opening a listing also saves a summary of its purchase history (see "Purchase history summaries"
+    below) from that same page load, so the verdict and the full page can use it; no extra page is loaded.</p>
   <p>The side panel shows which kind of eBay page your current tab is (for example a listing or a
     sold search). It only looks at the address of eBay tabs. Chrome does not show SoldScout the
     address of tabs on other websites.</p>
@@ -68,7 +70,7 @@
   <table>
     <tr><th>Data</th><th>When</th><th>Why</th></tr>
     <tr>
-      <td>Saved products: item number, title, price, currency, shipping, sold count, watchers, seller name, eBay category number, date saved, the 7 and 30 day units counted from that listing's purchase history page, by the listing card or when you open that page yourself (with the date of that check), and the cost you type with "+ Add my cost"</td>
+      <td>Saved products: item number, title, price, currency, shipping, sold count, watchers, seller name, eBay category number, date saved, the 7 and 30 day units counted from that listing's purchase history page, by the listing row or when you open that page yourself (with the date of that check), and the cost you type with "+ Add my cost"</td>
       <td>Only when you press "Save product", and the cost only when you type it</td>
       <td>To show your saved list with its profit, and let you download it as a CSV file</td>
     </tr>
@@ -115,7 +117,12 @@
     <tr>
       <td>Recent sales: for listings you opened, the item number and the units sold in the last 7, 14 and 30 days, with the time of the count (last 500 listings, deleted after 30 days). The times of the last few purchase history pages SoldScout loaded (only the last minute is kept).</td>
       <td>When you open a listing or its purchase history page</td>
-      <td>To show "Recent sales" on the listing card without loading the page again, and to keep within 6 pages a minute</td>
+      <td>To show "Recent sales" on the listing row without loading the page again, and to keep within 6 pages a minute</td>
+    </tr>
+    <tr>
+      <td>Purchase history summaries: for each listing you opened, and each listing whose purchase history page you opened, the item number, title, seller name, the "X sold" number, eBay's date, the time of your visit, and per sale the price, currency, quantity, date, time and variation (last 50 listings, up to 120 sales each, deleted after 30 days). A new visit replaces the old summary. Never anything about buyers.</td>
+      <td>When you open a listing (from the same purchase history page load as Recent sales) or its purchase history page</td>
+      <td>To show that product's verdict, sales, prices and charts on SoldScout's full page without loading eBay again</td>
     </tr>
     <tr>
       <td>Panel width: how wide you made the details panel on purchase history pages (one number)</td>
@@ -141,7 +148,7 @@
   <h2>Permissions</h2>
   <table>
     <tr><th>Permission</th><th>Why</th></tr>
-    <tr><td>Access to www.ebay.com</td><td>To read the eBay page you are viewing and show the card on it, to load the purchase history page of the listing you have open (Recent sales, see above), and to show in the side panel which eBay page is open</td></tr>
+    <tr><td>Access to www.ebay.com</td><td>To read the eBay page you are viewing and show the SoldScout row on it, to load the purchase history page of the listing you have open (Recent sales, see above), and to show in the side panel which eBay page is open</td></tr>
     <tr><td>storage</td><td>To keep your saved products, settings and card place on your computer</td></tr>
     <tr><td>sidePanel</td><td>To open your saved products, the profit calculator and other tools in Chrome's side panel</td></tr>
     <tr><td>contextMenus</td><td>To add "Check sold on eBay" to the right-click menu when you select text. It does not let SoldScout read any website</td></tr>
@@ -156,7 +163,7 @@
     extension, and ask for your permission where the law or Chrome requires it.</p>
 
   <h2>Contact</h2>
-  <p>Questions about privacy: <a href="mailto:soldscout.help@gmail.com">soldscout.help@gmail.com</a></p>
+  <p>Questions about privacy: <a href="mailto:moklesur42@gmail.com">moklesur42@gmail.com</a></p>
 
   <p><small>SoldScout is an independent tool. It is not affiliated with, endorsed by, or sponsored by eBay Inc.
     eBay is a trademark of eBay Inc.</small></p>
